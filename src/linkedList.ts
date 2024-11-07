@@ -1,9 +1,12 @@
-export class linkedList {
+import {BubbleSort} from "./sorter";
+
+export class linkedList extends BubbleSort {
     public data: number;
     public next: linkedList | null;
     public length: number;
 
     public constructor(data: number) {
+        super();
         this.data = data;
         this.next = null;
         this.length = 1;

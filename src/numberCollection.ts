@@ -1,8 +1,11 @@
-export class Number {
+import {BubbleSort} from "./sorter";
+
+export class Number extends BubbleSort{
 
     public data: number[]
 
     public constructor(data: number[]) {
+        super();
         this.data = data;
     }
 

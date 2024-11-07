@@ -1,7 +1,10 @@
-export class STR {
+import {BubbleSort} from "./sorter";
+
+export class STR extends BubbleSort {
     public data: string
 
     public constructor(data: string) {
+        super();
         this.data = data;
     }
 

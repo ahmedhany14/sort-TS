@@ -1,20 +1,19 @@
-import {Sortable} from './interfaces';
+export abstract class BubbleSort {
+    abstract get length(): number;
 
+    abstract compare(i: number, j: number): boolean;
 
-export class BubbleSort {
-    public collection;
+    abstract swap(i: number, j: number): void;
 
-    constructor(collection: Sortable) {
-        this.collection = collection;
-    }
+    abstract print(): void;
 
     public sort(): void {
-        const {length} = this.collection;
+        const {length} = this;
 
         for (let i = 0; i < length; ++i)
             for (let ii = 0; ii < length; ++ii)
-                if (this.collection.compare(i, ii)) this.collection.swap(i, ii);
-        this.collection.print();
+                if (this.compare(i, ii)) this.swap(i, ii);
+        this.print();
     }
 }
 
