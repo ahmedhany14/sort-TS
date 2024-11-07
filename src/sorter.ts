@@ -1,9 +1,10 @@
-import {Number} from './numberCollection';
+import {Sortable} from './interfaces';
+
 
 export class BubbleSort {
     public collection;
 
-    constructor(collection: Number) {
+    constructor(collection: Sortable) {
         this.collection = collection;
     }
 
